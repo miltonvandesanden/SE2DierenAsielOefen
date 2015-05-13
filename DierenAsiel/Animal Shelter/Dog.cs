@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Win32.SafeHandles;
 
 namespace AnimalShelter
 {
@@ -31,9 +32,12 @@ namespace AnimalShelter
         /// <param name="name">The name of the animal or null if unknown</param>
         /// <param name="lastWalkDate">The date of the last walk with the dog or null if unknown.</param>
         public Dog(string chipRegistrationNumber, SimpleDate dateOfBirth,
-            string name, SimpleDate lastWalkDate)
+            string name, SimpleDate lastWalkDate) : base(chipRegistrationNumber, dateOfBirth, name)
         {
-            // TODO: Modify the constructor. Make sure it initializes all properties of the class.
+            ChipRegistrationNumber = chipRegistrationNumber;
+            DateOfBirth = dateOfBirth;
+            Name = name;
+            this.lastWalkDate = lastWalkDate;
         }
 
         /// <summary>
@@ -52,9 +56,7 @@ namespace AnimalShelter
         /// </returns>
         public override string ToString()
         {
-            // TODO: Put your own code here to make the method return the string specified in the
-            // method description.
-            return null;
+            return "Dog: " + ChipRegistrationNumber + ", " + DateOfBirth + ", " + Name + ", " + IsReserved + ", " + lastWalkDate;
         }
     }
 }

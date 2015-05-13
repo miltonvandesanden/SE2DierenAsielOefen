@@ -33,9 +33,12 @@ namespace AnimalShelter
         /// <param name="badHabits">The nasty habbits of the cat (e.g. "scratches the couch")
         ///                           or null if none.</param>
         public Cat(string chipRegistrationNumber, SimpleDate dateOfBirth,
-            string name, string badHabits)
+            string name, string badHabits) : base(chipRegistrationNumber, dateOfBirth, name)
         {
-            // TODO: Modify the constructor. Make sure it initializes all properties of the class.
+            ChipRegistrationNumber = chipRegistrationNumber;
+            DateOfBirth = dateOfBirth;
+            Name = name;
+            BadHabits = badHabits;
         }
 
         /// <summary>
@@ -54,9 +57,8 @@ namespace AnimalShelter
         /// </returns>
         public override string ToString()
         {
-            // TODO: Put your own code here to make the method return the string specified in the
-            // method description.
-            return null;
+            return "Cat: " + ChipRegistrationNumber + ", " + DateOfBirth + ", " + Name + ", " + IsReserved + ", " +
+                   BadHabits;
         }
     }
 }

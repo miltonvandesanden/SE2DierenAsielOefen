@@ -27,6 +27,7 @@ namespace AnimalShelter
         public string ChipRegistrationNumber
         {
             get { return chipRegistrationNumber; }
+            set { chipRegistrationNumber = value; }
         }
 
         /// <summary>
@@ -35,6 +36,7 @@ namespace AnimalShelter
         public SimpleDate DateOfBirth
         {
             get { return dateOfBirth; }
+            set { dateOfBirth = value; }
         }
 
         /// <summary>
@@ -43,6 +45,7 @@ namespace AnimalShelter
         public string Name
         {
             get { return name; }
+            set { name = value; }
         }
 
         /// <summary>

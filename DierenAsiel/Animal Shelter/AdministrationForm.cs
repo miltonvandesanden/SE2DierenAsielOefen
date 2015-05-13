@@ -33,7 +33,14 @@ namespace AnimalShelter
         /// </summary>
         private void createAnimalButton_Click(object sender, EventArgs e)
         {
-            // TODO: See method description
+            if (animalTypeComboBox.SelectedIndex == 0)
+            {
+                Cat cat = new Cat("00001", new SimpleDate(DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year), "saartje", "high on catnip");
+            }
+            else if (animalTypeComboBox.SelectedIndex == 1)
+            {
+                Dog dog = new Dog("00001", new SimpleDate(25, 12, 1996), "Rex", new SimpleDate(DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year));                
+            }
         }
 
         /// <summary>
